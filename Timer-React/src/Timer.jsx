@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 
+import './Timer.css';
+
 const Timer = () => {
-    const [ days, setDays ] = useState(0);
-    const [ hours, setHours ] = useState(0);
-    const [ minutes, setMinutes ] = useState(0);
-    const [ seconds, setSeconds ] = useState(0);
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
 
     const deadline = "June, 01, 2025";
 
@@ -26,10 +28,14 @@ const Timer = () => {
 
     return (
         <div className='timer'>
-            <p>{days} days</p>
-            <p>{hours} hours</p>
-            <p>{minutes} minutes</p>
-            <p>{seconds} seconds</p>
+            <h1>Timer</h1>
+            <p>{deadline}</p>
+            <div className='countdown'>
+                <p>{days} days</p>
+                <p>{hours} hours</p>
+                <p>{minutes} minutes</p>
+                <p>{seconds} seconds</p>
+            </div>
         </div>
     );
 };
